@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to DevOps</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        #loginBox {
+            background-color: white;
+            width: 300px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Welcome to DevOps</h2>
+
+    <div id="loginBox">
+        <h3>Student Login</h3>
+
+        <input type="text" id="username"
+               placeholder="Enter Username">
+
+        <br>
+
+        <input type="password" id="password"
+               placeholder="Enter Password">
+
+        <br>
+
+        <button id="loginButton" onclick="login()">
+            Login
+        </button>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function login() {
+            var username =
+                document.getElementById("username").value;
+
+            var password =
+                document.getElementById("password").value;
+
+            var message =
+                document.getElementById("message");
+
+            if (username === "student" && password === "12345") {
+                message.innerHTML = "Login Successful";
+                message.style.color = "green";
+            } else {
+                message.innerHTML = "Invalid Username or Password";
+                message.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
